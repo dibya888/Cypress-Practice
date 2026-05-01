@@ -9,6 +9,7 @@ describe("Opening New Account", () => {
         cy.get('[name="password"]').type('admin');
         cy.get("#loginPanel").find('[class="button"]').click();
         cy.get('.title').should('have.text', 'Accounts Overview');
+        cy.get('.title').should('be.visible').and('be.enabled').and('be.focused');
         cy.get('#leftPanel').find('a').contains("Open New Account").click();
         cy.get('#type').select('SAVINGS');
         cy.get('#fromAccountId').select('17118');
