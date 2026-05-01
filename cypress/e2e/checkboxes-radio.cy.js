@@ -2,7 +2,7 @@
 
 describe("Checking checkbox", () => {
     beforeEach('Setup', () => {
-        cy.visit('https://the-internet.herokuapp.com/checkboxes');
+        cy.visit('/checkboxes');
     })
 
     it("Checkbox Check", () => {

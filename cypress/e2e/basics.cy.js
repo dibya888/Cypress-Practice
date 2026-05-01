@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-describe("Basic Tests", () => {
+describe("Basic Tests", { browser: 'firefox' }, () => {
     beforeEach("Visit base website", () => {
         cy.visit("https://opensource-demo.orangehrmlive.com/")
     })
