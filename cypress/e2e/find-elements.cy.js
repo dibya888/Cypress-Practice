@@ -8,5 +8,9 @@ describe("Common Locator Types", () => {
         cy.get('.example').contains("200").click()
         cy.get('h3').should('have.text', "Status Codes")
     })
+    it.only("cy.find() example", () => {
+        cy.visit("https://the-internet.herokuapp.com/tables")
+        cy.get("#table1").find('.header').contains('First Name')
+    })
 
 })
