@@ -5,11 +5,11 @@ describe("Basic Tests", () => {
         cy.visit("https://opensource-demo.orangehrmlive.com/")
     })
     afterEach("Indicate test completion", () => {
-        cy.log("The Test is Completed.")
+        cy.log("The Test is Completed.") //This is implicit assertion, Cypress checks validity.
     })
 
     it("Visit the website and verify the header", () => {
-        cy.get("img[alt='company-branding']").should("be.visible")
+        cy.get("img[alt='company-branding']").should("be.visible") //This is explicit assertion as We check validity
         cy.title().should("eq", "OrangeHRM")
     })
 
